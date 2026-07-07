@@ -1855,6 +1855,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!wrapper || isHeroBgWrapper(wrapper)) return;
         var widthMode = wrapper.getAttribute('data-zappy-zoom-wrapper-width-mode');
         if (widthMode === 'full') return;
+        var forceCardSlotFill = widthMode === 'card-slot' || wrapper.getAttribute('data-zappy-card-slot-fill') === '1';
+        var parentFrameSynced = wrapper.parentElement &&
+          wrapper.parentElement.getAttribute &&
+          wrapper.parentElement.getAttribute('data-zappy-image-frame-synced') === 'true';
         // Walk UP through editor-injected / "thin" wrappers to find the real
         // visual image-slot container. We tolerate at most 3 levels of:
         //   - <a style="display:contents">           (editor link wrap)
@@ -1877,6 +1881,18 @@ document.addEventListener('DOMContentLoaded', function() {
           node = node.parentElement;
         }
         if (!slotEl) {
+          if (forceCardSlotFill && !parentFrameSynced) {
+            var forcedSW = parseFloat(wrapper.getAttribute('data-zappy-zoom-wrapper-width')) || 0;
+            var forcedSH = parseFloat(wrapper.getAttribute('data-zappy-zoom-wrapper-height')) || 0;
+            wrapper.style.setProperty('width', '100%', 'important');
+            wrapper.style.setProperty('max-width', '100%', 'important');
+            wrapper.style.setProperty('padding-bottom', '0', 'important');
+            if (forcedSW > 0 && forcedSH > 0) {
+              wrapper.style.setProperty('aspect-ratio', forcedSW + '/' + forcedSH, 'important');
+              wrapper.style.setProperty('height', 'auto', 'important');
+            }
+            wrapper.setAttribute('data-zappy-card-slot-fill', '1');
+          }
           // No image-slot found. Check if the walk stopped at a card-like
           // container and the saved width fills most of the card — this handles
           // user-replaced images where the original image-wrap is empty and the
@@ -1934,7 +1950,6 @@ document.addEventListener('DOMContentLoaded', function() {
         var slotCS = window.getComputedStyle(slotEl);
         var slotWidthGap = slotRect.width - wrapRect.width;
         var slotHeightGap = wrapRect.height - slotRect.height;
-        var forceCardSlotFill = widthMode === 'card-slot' || wrapper.getAttribute('data-zappy-card-slot-fill') === '1';
         if (!forceCardSlotFill && slotWidthGap <= 4 && !(slotHeightGap > 4 && slotRect.height > 0 && slotCS.overflow !== 'visible')) return;
         var swStr = wrapper.getAttribute('data-zappy-zoom-wrapper-width');
         var shStr = wrapper.getAttribute('data-zappy-zoom-wrapper-height');
@@ -2222,7 +2237,10 @@ document.addEventListener('DOMContentLoaded', function() {
       if (isHeroBgWrapper(wrapper)) return;
 
       if ((widthMode === 'card-slot' || wrapper.getAttribute('data-zappy-card-slot-fill') === '1') &&
-          !findImageSlotContainerForZoomWrapper(wrapper, 4)) {
+          !findImageSlotContainerForZoomWrapper(wrapper, 4) &&
+          wrapper.parentElement &&
+          wrapper.parentElement.getAttribute &&
+          wrapper.parentElement.getAttribute('data-zappy-image-frame-synced') === 'true') {
         // Older published runtimes used substring matching and could persist
         // card-slot fill on decorative frames like "showcase-image-wrapper".
         // Clear that stale marker so saved pixel crop dimensions win again.
