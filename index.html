@@ -289,6 +289,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="גלו את ערכת הקריאה המושלמת לילדים — צליל התנועה - כשאותיות הופכות למילים">
     <meta name="twitter:description" content="הפכו את לימוד הקריאה להרפתקה קסומה עם ערכה חינוכית ייחודית מבית צליל התנועה. 40 חוברות, מפת אוצר ומדבקות הצלחה מחכים לכם.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://tzlil-hatnua-when-letters-beco.zappy5.app#organization","name":"צליל התנועה - כשאותיות הופכות למילים","url":"https://tzlil-hatnua-when-letters-beco.zappy5.app","description":"Tzlil HaTnua ('The Vowel Sound') is an Israeli educational brand offering a complete, adventure-themed reading learning kit for children aged 5–7. The brand transforms the process of learning to read into a joyful, empowering journey — combining 40 graded reading booklets, a treasure-map journey chart, success stickers, and a graduation certificate. The visual identity draws on a magical nautical adventure world with motifs like enchanted islands, treasure maps, anchors, compasses, stars, waves, and gold coins — executed in a clean, elegant, minimalist style using soft teal, turquoise, white, sand, and light gold. The brand speaks to parents who want to confidently guide their child's reading journey at home, emphasizing warmth, trust, professional methodology, and genuine moments of success.","contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"tzlil.hatnua@gmail.com"}]},{"@type":"WebSite","@id":"https://tzlil-hatnua-when-letters-beco.zappy5.app#website","url":"https://tzlil-hatnua-when-letters-beco.zappy5.app","name":"צליל התנועה - כשאותיות הופכות למילים","publisher":{"@id":"https://tzlil-hatnua-when-letters-beco.zappy5.app#organization"}},{"@type":"ContactPage","@id":"https://tzlil-hatnua-when-letters-beco.zappy5.app#contactpage","url":"https://tzlil-hatnua-when-letters-beco.zappy5.app","name":"גלו את ערכת הקריאה המושלמת לילדים — צליל התנועה - כשאותיות הופכות למילים","mainEntity":{"@id":"https://tzlil-hatnua-when-letters-beco.zappy5.app#organization"},"potentialAction":{"@type":"CommunicateAction","target":{"@type":"EntryPoint","urlTemplate":"https://tzlil-hatnua-when-letters-beco.zappy5.app/api/email/contact-form","actionPlatform":["http/method=POST"],"contentType":"application/json"},"instrument":[{"@type":"PropertyValue","name":"name","propertyID":"text","valueRequired":true,"description":"השם שלך"},{"@type":"PropertyValue","name":"email","propertyID":"email","valueRequired":true,"description":"your@email.com"},{"@type":"PropertyValue","name":"phone","propertyID":"tel","valueRequired":true,"description":"050-0000000"},{"@type":"PropertyValue","name":"message","propertyID":"textarea","valueRequired":true,"description":"איך נוכל לעזור? אשמח לשמוע עוד על..."},{"@type":"PropertyValue","name":"privacy_consent","propertyID":"checkbox","valueRequired":true}]}}]}</script>
+    <meta property="og:url" content="https://tzlil-hatnua-when-letters-beco.zappy5.app">
     <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
@@ -1066,9 +1068,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       @media (max-width: 768px) {
         #mic-access-tool-general-button, .mic-access-tool-general-button,
         #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
-        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
-        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
-          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        ._access-icon { display: flex !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; }
+        #mic-access-tool-box.opened-mic-access-tool, .mic-access-tool-box.opened-mic-access-tool,
+        #mic-init-access-tool #mic-access-tool-box.opened-mic-access-tool {
+          visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
         }
       }
       @media (min-width: 769px) {
