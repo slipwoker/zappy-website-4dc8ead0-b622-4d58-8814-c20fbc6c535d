@@ -2,13 +2,13 @@
 
 Tzlil HaTnua ('The Vowel Sound') is an Israeli educational brand offering a complete, adventure-themed reading learning kit for children aged 5–7. The brand transforms the process of learning to read into a joyful, empowering journey — combining 40 graded reading booklets, a treasure-map journey chart, success stickers, and a graduation certificate. The visual identity draws on a magical nautical adventure world with motifs like enchanted islands, treasure maps, anchors, compasses, stars, waves, and gold coins — executed in a clean, elegant, minimalist style using soft teal, turquoise, white, sand, and light gold. The brand speaks to parents who want to confidently guide their child's reading journey at home, emphasizing warmth, trust, professional methodology, and genuine moments of success.
 
-Source: https://example.com
+Source: https://tzlil-hatnua-when-letters-beco.zappy5.app
 
 ---
 
 ## גלו את ערכת הקריאה המושלמת לילדים — צליל התנועה - כשאותיות הופכות למילים
 
-URL: https://example.com
+URL: https://tzlil-hatnua-when-letters-beco.zappy5.app
 Description: הפכו את לימוד הקריאה להרפתקה קסומה עם ערכה חינוכית ייחודית מבית צליל התנועה. 40 חוברות, מפת אוצר ומדבקות הצלחה מחכים לכם. התחילו עוד היום!
 
 גלו את ערכת הקריאה המושלמת לילדים — צליל התנועה - כשאותיות הופכות למילים
@@ -651,7 +651,7 @@ Please enter your message
 
 ## מדיניות פרטיות
 
-URL: https://example.com/privacy
+URL: https://tzlil-hatnua-when-letters-beco.zappy5.app/privacy
 Description: מדיניות הפרטיות שלנו - כיצד אנו אוספים, משתמשים ומגנים על המידע שלכם
 
 מדיניות פרטיות
@@ -896,7 +896,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 
 ## הצהרת נגישות
 
-URL: https://example.com/accessibility
+URL: https://tzlil-hatnua-when-letters-beco.zappy5.app/accessibility
 Description: הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית
 
 הצהרת נגישות
@@ -1150,7 +1150,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 
 ## תנאי שימוש
 
-URL: https://example.com/terms
+URL: https://tzlil-hatnua-when-letters-beco.zappy5.app/terms
 Description: תנאי השימוש באתר - הזכויות והחובות של המשתמשים
 
 תנאי שימוש
